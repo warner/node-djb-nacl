@@ -1,3 +1,0 @@
-[submodule "nacl"]
-	path = nacl
-	url = git://github.com/asutherland/nacl.git
