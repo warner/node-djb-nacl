@@ -3,3 +3,7 @@ build/
 node_modules/
 npm-debug.log
 nacl.node
+
+nacl/build/
+nacl/.lock-wafbuild
+nacl/.waf*

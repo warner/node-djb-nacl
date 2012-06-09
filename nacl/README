@@ -1,0 +1,27 @@
+A mirror of Daniel Bernstein (djb) and Tanja Lange's "NaCl: Networking and Cryptography library",
+tagged for each release.  The main distribution is bereft of public repository or even a changelog;
+this is kept for version sanity.
+
+  main site: http://nacl.cr.yp.to/
+
+Release: 20090405
+Release: 20110221
+
+
+The buildsystem has been altered to use waf.
+
+On linux and OS X, this should be straightforward:
+./waf configure build
+
+On windows, you might want to do:
+CC=i686-pc-mingw32-gcc CXX=i686-pc-mingw32-g++ ./waf configure build
+
+To cross-compile for android (from linux), you might want to do:
+./helpbuild-android /path/to/android-ndk-r6
+
+An attempt has been made to build nacl under emscripten, but the result did not
+appear to work.  (Note: the elimination stage had to be skipped because of
+memory exhaustion.)  Most specifically, signature creation seemed to go into an
+infinite loop.  See the node.js bindings for the unit test logic.  You can
+try and do emscripten builds by doing:
+./helpbuild-emscripten /path/to/emscripten
